@@ -6,3 +6,8 @@ function posicionarMenuNoFinal() {
   
   window.addEventListener("load", posicionarMenuNoFinal);
   window.addEventListener("resize", posicionarMenuNoFinal);
+
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+
+  
