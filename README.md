@@ -15,6 +15,8 @@ O design utilizado como base para este projeto foi criado por **Keerthika S**, d
 **Créditos ao design original por Keerthika S.**  
 Figma Profile: [@keerthikaselvakumar](https://www.figma.com/@keerthikaselvakumar)
 
+## Link do projetoÇ
+- https://wesleysantos0.github.io/ingressos/
 ## 🧰 Tecnologias Utilizadas
 - HTML-5
 - CSS-3
