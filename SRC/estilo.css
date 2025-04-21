@@ -108,7 +108,7 @@ h2 {
 .menuBotton nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     list-style: none;
     height: 100%;
 }
