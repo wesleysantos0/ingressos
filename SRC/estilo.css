@@ -111,6 +111,7 @@ h2 {
     align-items: start;
     list-style: none;
     height: 100%;
+    padding-top: 20px;
 }
 
 .active {
@@ -119,7 +120,7 @@ h2 {
     padding: 20px;
     background: linear-gradient(60deg, #8E73AC, #6E54A9, #C291CA);
     position: relative;
-    top: -25px;
+    top: -35px;
 }
 
 .bi {
