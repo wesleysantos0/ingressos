@@ -1,24 +1,25 @@
-function posicionarMenuNoFinal() {
-  const menu = document.querySelector(".menuBotton");
-  const alturaJanela = window.innerHeight;
-  menu.style.top = (alturaJanela - menu) + "px";
-}
 
-window.addEventListener("load", posicionarMenuNoFinal);
-window.addEventListener("resize", posicionarMenuNoFinal);
+//  Buscando o elemento Lista 
+  const lista = document.querySelectorAll('.lista');
 
-console.log(window.innerWidth);
-console.log(window.innerHeight);
+        function ativarlink() {
+            lista.forEach(i => i.classList.remove('ativo'));
+            this.classList.add('ativo');
 
-///  PAGINA DE LOCALIZACAO
+            const index = Array.from(lista).indexOf(this);
+            localStorage.setItem('abaAtiva', index);
 
-let pergunta = document.querySelector('.pergunta')
+            const href = this.querySelector('a').getAttribute('href');
+            if (href) window.location.hash = href;
+        }
 
-let btnSim = document.querySelector('#sim');
-btnSim.addEventListener('click', dpNone());
+        lista.forEach(i => i.addEventListener('click', ativarlink));
 
-function dpNone(){
-  pergunta.style.cssText = "display:none;"
-  console.log('click');
-  
-}
+        window.addEventListener('DOMContentLoaded', () => {
+            const salvo = localStorage.getItem('abaAtiva');
+            const index = salvo !== null ? parseInt(salvo) : 0;
+
+            if (lista[index]) {
+                lista[index].classList.add('ativo');
+            }
+        });

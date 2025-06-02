@@ -91,73 +91,100 @@ h2 {
     scroll-snap-align: start;
 }
 
+/* Navegação Mobile*/
 
-.menuBotton {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    height: auto;
-    margin-top: 25px;
-    background: linear-gradient(90deg, #75498D, #6E56B1, #BC6BB9);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.menuBotton nav {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    list-style: none;
-    height: 100%;
-    padding-top: 20px;
-}
-
-.active {
-    border-collapse: collapse;
-    border-radius: 50%;
-    padding: 20px;
+.navegacao{
     background: linear-gradient(60deg, #8E73AC, #6E54A9, #C291CA);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.navegacao ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navegacao ul li{
+    width: 80px;
+    height: 80px;
+    list-style-type: none;
     position: relative;
-    top: -35px;
+    z-index: 1;
 }
 
-.bi {
-    height: 20px;
-    width: 20px;
-    color: aliceblue;
+
+.navegacao ul li a {
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
 }
 
-.size-6 {
+.navegacao ul li a .icone{
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    color: #fff;
+    position: relative;
+    transition: .5s;
+}
+
+.navegacao ul li.ativo a .icone {
+    transform: translateY(-35px);
     color: white;
 }
 
-
-/* PAGINA DE LOCALIZACAO */
-
-.frame-location {
-    display: none;
-    height: 100dvh;
-    text-align: center;
+.navegacao ul li a .texto {
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    transition: .8s;
+    transform: translateY(20px);
 }
 
-.pergunta {
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
+.navegacao ul li.ativo a .texto{
+    opacity: 1;
+    transform: translateY(40px);
 }
 
-.btn-questao {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-}
 
-.btn-questao button {
-    border-radius: 20px;
-    padding: 10px;
+.indicador {
     width: 80px;
-
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50%;
+    background: linear-gradient(60deg, #C291CA);
+    transition: .5s ease;
 }
+
+
+.navegacao ul li:nth-child(1).ativo ~ .indicador{
+    transform: translateX(calc(80px * -2.15));
+}
+.navegacao ul li:nth-child(2).ativo ~ .indicador{
+    transform: translateX(calc(80px * -1.1));
+}
+.navegacao ul li:nth-child(3).ativo ~ .indicador{
+    transform: translateX(calc(80px * 0));
+}
+.navegacao ul li:nth-child(4).ativo ~ .indicador{
+    transform: translateX(calc(80px * 1.1));
+}
+.navegacao ul li:nth-child(5).ativo ~ .indicador{
+    transform: translateX(calc(80px * 2.15));
+}
+
+
+/* 
+background: linear-gradient(60deg, #8E73AC, #6E54A9, #C291CA);
+
+*/
+/* PAGINA DE LOCALIZACAO */
