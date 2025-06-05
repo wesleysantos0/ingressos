@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .catalogo{
+            position: relative;
+            background-color: aliceblue;
+            width: 800px;
+            height: 500px;
+            border: 1px solid green;
+        }
+
+        .catalogo ul {
+            display: grid;
+            grid-template: 500px / repeat(3, 1fr);
+            list-style-type: none;
+            position: relative;
+        }
+        #c{
+            position: relative;
+            background-color: blue;
+        }
+        #co{
+            position: relative;
+            background-color: rgb(21, 255, 0);
+        }
+        #cor{
+            position: relative;
+            background-color: rgb(255, 0, 0);
+        }
+
+    </style>
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="catalogo">
+        <ul>
+            <li class="filme" id="c">
+               ola 
+            </li>
+            <li class="filme" id="co">
+                
+            </li>
+            <li class="filme" id="cor">
+                
+            </li>
+            
+        </ul>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
